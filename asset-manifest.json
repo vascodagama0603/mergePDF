@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/mergPDF/static/css/main.e6c13ad2.css",
-    "main.js": "/mergPDF/static/js/main.3ba2db34.js",
-    "static/js/453.af5cb1f9.chunk.js": "/mergPDF/static/js/453.af5cb1f9.chunk.js",
-    "index.html": "/mergPDF/index.html",
-    "main.e6c13ad2.css.map": "/mergPDF/static/css/main.e6c13ad2.css.map",
-    "main.3ba2db34.js.map": "/mergPDF/static/js/main.3ba2db34.js.map",
-    "453.af5cb1f9.chunk.js.map": "/mergPDF/static/js/453.af5cb1f9.chunk.js.map"
+    "main.css": "/mergePDF/static/css/main.e6c13ad2.css",
+    "main.js": "/mergePDF/static/js/main.c7698775.js",
+    "static/js/105.06c98992.chunk.js": "/mergePDF/static/js/105.06c98992.chunk.js",
+    "static/js/453.af5cb1f9.chunk.js": "/mergePDF/static/js/453.af5cb1f9.chunk.js",
+    "index.html": "/mergePDF/index.html",
+    "main.e6c13ad2.css.map": "/mergePDF/static/css/main.e6c13ad2.css.map",
+    "main.c7698775.js.map": "/mergePDF/static/js/main.c7698775.js.map",
+    "105.06c98992.chunk.js.map": "/mergePDF/static/js/105.06c98992.chunk.js.map",
+    "453.af5cb1f9.chunk.js.map": "/mergePDF/static/js/453.af5cb1f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.3ba2db34.js"
+    "static/js/main.c7698775.js"
   ]
 }
