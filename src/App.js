@@ -1,6 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-import { PDFDocument } from "pdf-lib";
 import React, { useState } from 'react';
 
 function App() {
@@ -20,11 +17,12 @@ function App() {
       return;
     }
 
+    setStatus('PDFを結合中...');
+    const { PDFDocument } = await import('pdf-lib'); // 動的インポートでバンドルサイズ最適化
+
     try {
-      setStatus('PDFを結合中...');
       const mergedPdf = await PDFDocument.create();
 
-      // 各PDFファイルを読み込んでページを追加
       for (const pdfFile of pdfFiles) {
         const pdfBytes = await pdfFile.arrayBuffer();
         const pdfDoc = await PDFDocument.load(pdfBytes);
@@ -32,7 +30,6 @@ function App() {
         copiedPages.forEach((page) => mergedPdf.addPage(page));
       }
 
-      // 結合したPDFをダウンロード
       const mergedPdfBytes = await mergedPdf.save();
       downloadFile(mergedPdfBytes, 'merged.pdf');
       setStatus('結合が完了しました！');
@@ -42,7 +39,7 @@ function App() {
     }
   };
 
-  // ファイルダウンロード用のヘルパー関数
+  // ダウンロード用の関数
   const downloadFile = (bytes, fileName) => {
     const blob = new Blob([bytes], { type: 'application/pdf' });
     const link = document.createElement('a');
@@ -52,8 +49,8 @@ function App() {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>PDF結合ツール</h2>
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h1>PDF結合ツール</h1>
       <input
         type="file"
         multiple
@@ -71,4 +68,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
