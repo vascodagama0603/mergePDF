@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { PDFDocument } from "pdf-lib";
 import React, { useState } from 'react';
-import { PDFDocument } from 'pdf-lib';
 
 function App() {
   const [pdfFiles, setPdfFiles] = useState([]);
